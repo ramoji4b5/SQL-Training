@@ -1,3 +1,5 @@
+-----subquery examples
+
 select first_name,last_name,salary from hr_database.employees where salary = 5000;
 select first_name,last_name,salary from hr_database.employees where salary >= 5000;
 select first_name,salary from hr_database.employees where salary =(select MAX(salary) from hr_database.employees)
