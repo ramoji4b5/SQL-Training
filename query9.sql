@@ -1,3 +1,5 @@
+----Grouping rows
+
 SELECT department_id FROM hr_database.employees GROUP BY department_id ORDER BY department_id;
 select first_name from hr_database.employees group by department_id,first_name;
 SELECT DISTINCT department_id FROM hr_database.employees ORDER BY department_id;
