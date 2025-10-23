@@ -18,6 +18,10 @@ language plpgsql;
 
 select add_num(20,30);
 
+call procedure_name;
+
+select function_name;
+
 
 
 CREATE OR REPLACE FUNCTION apply_salary_hike()
@@ -47,7 +51,7 @@ $$ LANGUAGE plpgsql;
 #######################################################
 
 
-SELECT apply_salary_hike_1(15);  
+SELECT apply_salary_hike_1(10);  
 
 
 ############################################
@@ -68,6 +72,8 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+select group_sql('Anu')
+
 
 create or replace function min_salary(min_salary Numeric)
 RETURNS TABLE(
@@ -87,8 +93,27 @@ select add_num(30,20)
 
 select min_salary(12000);
 
+-- to get the total salary for each department 
+select first_name,last_name,job_id,department_id,sum(salary) from employees 
+group by(department_id,first_name,last_name,job_id)
 
 
-select department_id,min(salary) from employees group by(department_id)
+
+select ____________ department_id,sum(salary) from employees group by(department_id)
+
+#############################################################
+create or replace function sum_dep_salary(dep_id int)
+returns numeric as $$
+DECLARE total numeric;
+BEGIN
+	select sum(salary)into total from employees where department_id=dep_id;
+	return total;
+END;
+$$ language plpgsql;
+
+select sum_dep_salary(11);
+
+sum_dep_salary_by_name('IT')
+	
 
 
