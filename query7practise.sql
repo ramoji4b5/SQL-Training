@@ -1,3 +1,6 @@
+
+---joins using right ,left,cross
+
 select t1.first_name employee,t1.employee_id,t2.first_name,t2.manager_id manager From hr_database.employees t1  right Join 
 hr_database.employees t2 on t1.employee_id=t2.manager_id where t1.first_name='Steven';
 select t1.first_name employee,t1.employee_id,t2.first_name,t2.manager_id manager From hr_database.employees t1  right Join 
