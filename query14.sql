@@ -1,3 +1,5 @@
+----subquery
+
 select first_name,round(avg(salary),2) from hr_database.employees group by first_name;
 
 select department_id,ROUND(AVG(salary),2) from hr_database.employees group by department_id ORDER BY department_id asc;
