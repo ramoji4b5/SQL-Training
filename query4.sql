@@ -1,3 +1,5 @@
+----ALTER,drop,truncate,delete,upadate
+
 create database jntu;
 use jntu;
 create table students(ID VARCHAR(255) PRIMARY KEY, NAME CHAR(50), COURSE CHAR(50));
