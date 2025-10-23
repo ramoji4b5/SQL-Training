@@ -1,4 +1,4 @@
----filtering data using where clauses
+----filtering data using where clauses
 
 select employee_id,first_name ,last_name , hire_date from hr_database.employees where last_name="king";
 
