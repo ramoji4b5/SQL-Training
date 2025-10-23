@@ -1,3 +1,5 @@
+---subquery
+
 SELECT ROUND(AVG(salary),2) average_salary FROM employees 
 
 SELECT first_name,salary,
@@ -25,6 +27,7 @@ FROM  employees e
 ORDER BY
   salary;
 	
+
 
 
 
