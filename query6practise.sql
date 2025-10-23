@@ -1,3 +1,5 @@
+----joins
+
 SELECT * FROM hr_database.employees as E join hr_database.departments as D ON E.department_id=D.department_id;
 SELECT count(*) FROM hr_database.employees;
 SELECT E.first_name,E.salary,D.department_name FROM hr_database.employees as E join hr_database.departments as D 
