@@ -1,3 +1,5 @@
+-----grouping sets
+
 create table salary_reports
 (
 id SERIAL PRIMARY KEY,
@@ -67,3 +69,4 @@ CREATE TABLE IF NOT EXISTS employees (
     FOREIGN KEY (manager_id) REFERENCES employees(employee_id),
     FOREIGN KEY (department_id) REFERENCES departments(department_id)
 );
+
